@@ -34,10 +34,10 @@
         <!-- 查询结果选择性返回插件 -->
         <plugin type="com.itfsw.mybatis.generator.plugins.SelectSelectivePlugin" />
 
-        <!--<plugin type="com.hy.plugin.OverIsMergeablePlugin">-->
-            <!--&lt;!&ndash; 生成xml 文件是否追加 &ndash;&gt;-->
-            <!--<property name="isMergeable" value="true" />-->
-        <!--</plugin>-->
+        <plugin type="com.hy.plugin.OverIsMergeablePlugin">
+            <!-- 生成xml 文件是否追加 -->
+            <property name="isMergeable" value="false" />
+        </plugin>
 
         <plugin type="com.hy.plugin.CustomizedCommentPlugin">
             <!-- 是否禁止显示日期 true：是 ： false:否 -->

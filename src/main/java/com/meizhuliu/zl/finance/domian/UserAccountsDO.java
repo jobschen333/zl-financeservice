@@ -1,9 +1,11 @@
 package com.meizhuliu.zl.finance.domian;
 
+import java.math.BigDecimal;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
-import java.math.BigDecimal;
 /**
  * 用户账户表
  * 实体类对应的数据表为：  user_accounts

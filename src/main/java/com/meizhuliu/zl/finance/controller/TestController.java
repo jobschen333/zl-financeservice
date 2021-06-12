@@ -1,7 +1,9 @@
 package com.meizhuliu.zl.finance.controller;
 
 import com.meizhuliu.zl.finance.domian.UserAccountsDO;
+import com.meizhuliu.zl.finance.domian.UserAccountsDOExample;
 import com.meizhuliu.zl.finance.mapper.TestMapper;
+import com.meizhuliu.zl.finance.mapper.UserAccountsDOMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +25,8 @@ public class TestController {
     @Autowired
     private TestMapper testMapper;
 
+    @Autowired
+    private UserAccountsDOMapper userAccountsDOMapper;
 
 
     @RequestMapping("test")
@@ -31,6 +35,11 @@ public class TestController {
         UserAccountsDO userAccountsDO = testMapper.listById(11L);
         System.out.println("userAccount={}"+ userAccountsDO);
         System.out.println();
+        UserAccountsDOExample userAccountsDOExample = new UserAccountsDOExample();
+        userAccountsDOExample.or()
+                .andIdEqualTo(11L);
+        List<UserAccountsDO> userAccountsDOS = userAccountsDOMapper.selectByExample(userAccountsDOExample);
+
 
     }
 
