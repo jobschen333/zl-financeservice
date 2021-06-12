@@ -5,16 +5,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author chxy
- * @date 2021/6/12 09:58
+ * @date 2021/6/12 11:26
  */
 @RestController
-@RequestMapping("test")
-public class TestController {
+public class HelloController {
 
-    @RequestMapping("test")
-    public void test() {
-
-        System.out.println("test 类");
+    @RequestMapping("/hello")
+    public  String  hello(){
+        return "hello world";
     }
-
+    //REST API
 }

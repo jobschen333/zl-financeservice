@@ -1,0 +1,1 @@
+scp -r /Users/chenxiaoyang/financeProject/zl-financeservice/target/zl-financeservice-1.0-SNAPSHOT.jar root@139.196.77.16:/root/test
