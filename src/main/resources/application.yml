@@ -10,5 +10,15 @@ eureka:
       # 续约到期时间（默认90秒）
       lease-expiration-duration-in-seconds: 30
 spring:
+  jndi:
+    # 高版本中引入了JNDI查询而出现此问题，因此禁用jndi即可。
+    ignore: true
   application:
-    name: zl-financeservice
+    name:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://106.54.7.136:3306/dengxian?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+    username: root
+    password: flaravel@password
+mybatis:
+  mapper-locations: classpath:mapping/**
