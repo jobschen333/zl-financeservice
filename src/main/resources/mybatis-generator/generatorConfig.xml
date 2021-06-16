@@ -107,7 +107,25 @@
 
         <!--下面是一些文件-->
 
-        <table tableName="user_accounts" domainObjectName="UserAccountsDO">
+        <!--<table tableName="user_accounts" domainObjectName="UserAccountsDO">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
+
+        <table tableName="account_record" domainObjectName="AccountRecordDO">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+
+        <table tableName="account_record_all" domainObjectName="AccountRecordAllDO">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+
+        <table tableName="user_account_detail" domainObjectName="UserAccountDetailDO">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+        <table tableName="user_gifts" domainObjectName="UserGiftsDO">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
 
